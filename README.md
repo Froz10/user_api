@@ -1,24 +1,40 @@
-# README
+# user-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+HTTP API:
 
-Things you may want to cover:
+POST /api/users: returns the JSON with user data
 
-* Ruby version
+```
+## Project setup
+```
+bundle install
+```
+### Migrate database
+```
+rails db:migrate
+```
+### Run server
+```
+rails s
+```
+### Testing
+```
+curl -i -X 'POST' \
+  'http://localhost:3000/api/users' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "user": {
+    "name": "Ivan",
+    "surname": "Ivanov",
+	  "patronymic": "Ivanovich",
+    "email": "test4@test.ru",
+	  "nationality": "RU",
+    "country": "Russia",
+	  "gender": "male",
+    "age": "37",
+	  "interests": ["Ruby"],
+	  "skills": ["Programming"]
+  }
+}'
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```

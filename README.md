@@ -27,7 +27,7 @@ curl -i -X 'POST' \
     "name": "Ivan",
     "surname": "Ivanov",
 	  "patronymic": "Ivanovich",
-    "email": "test4@test.ru",
+    "email": "test@test.ru",
 	  "nationality": "RU",
     "country": "Russia",
 	  "gender": "male",
